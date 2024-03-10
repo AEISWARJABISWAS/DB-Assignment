@@ -1,0 +1,5 @@
+1. Relationship between "Product" and "Product_Category" entities:
+The relationship between the "Product" and "Product_Category" entities is typically represented as a foreign key relationship. In the provided schema, the "Product" table has a column named category_id, which is a foreign key referencing the id column in the "product_category" table. This establishes a connection between the two tables, indicating that each product in the "Product" table is associated with a specific category from the "Product_Category" table.
+
+2. Ensuring each product has a valid category:
+To ensure that each product in the "Product" table has a valid category assigned to it, you can enforce referential integrity through the use of foreign key constraints. This ensures that the values in the category_id column of the "Product" table must correspond to valid values in the id column of the "product_category" table. By setting up a foreign key constraint, any attempt to insert a product with a non-existent category ID or violate the referential integrity will result in an error, preventing the database from having invalid data.
